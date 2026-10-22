@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FileViewer</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="top">
+    <h1>FileViewer</h1>
+    <form class="logout" method="post" action="/logout"><button>Log out</button></form>
+  </div>
+  <nav class="nav">
+    <a id="back" class="back" hidden>← Back</a>
+    <span id="current" class="path"></span>
+  </nav>
+  <div id="grid" class="grid"></div>
+  <p id="message" hidden></p>
+
+  <template id="folder-card">
+    <a class="card">
+      <div class="folder-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+      </div>
+      <div class="name"><span class="tag">Folder</span><span class="filename"></span></div>
+    </a>
+  </template>
+
+  <template id="image-card">
+    <div class="card">
+      <img loading="lazy">
+      <div class="name"><span class="tag"></span><span class="filename"></span></div>
+    </div>
+  </template>
+
+  <template id="video-card">
+    <div class="card">
+      <video controls preload="metadata"></video>
+      <p class="err" hidden>Video failed to load.</p>
+      <div class="name"><span class="tag">MP4 · TCP stream</span><span class="filename"></span></div>
+    </div>
+  </template>
+</body>
+</html>

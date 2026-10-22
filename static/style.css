@@ -1,0 +1,20 @@
+[hidden]{display:none!important}
+body{font-family:system-ui,sans-serif;margin:0;padding:1.5rem;background:#f4f4f5;color:#18181b}
+h1{margin:0 0 1rem;font-size:1.4rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.card{background:#fff;border-radius:8px;padding:.75rem;box-shadow:0 1px 3px #0002}
+.card img,.card video{width:100%;border-radius:4px;background:#000}
+a.card{display:block;color:inherit;text-decoration:none}
+a.card:hover{box-shadow:0 2px 8px #0003}
+.folder-icon{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;border-radius:4px;background:#e4e4e7;color:#a1a1aa}
+.folder-icon svg{width:30%;height:auto}
+.nav{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;min-height:2.2rem}
+.back{padding:.4rem .8rem;border-radius:6px;background:#fff;box-shadow:0 1px 3px #0002;color:inherit;text-decoration:none}
+.path{font-family:ui-monospace,monospace;font-size:.9rem;color:#52525b;word-break:break-all}
+.name{font-size:.85rem;margin-top:.4rem;word-break:break-all}
+.tag{font-size:.7rem;padding:.1rem .4rem;border-radius:4px;background:#e4e4e7;margin-right:.3rem}
+form.login{max-width:320px;margin:15vh auto;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 1px 3px #0002}
+form.logout,form.logout button{width:auto}
+input,button{font:inherit;padding:.5rem;width:100%;box-sizing:border-box;margin-top:.5rem}
+.err{color:#b91c1c}
