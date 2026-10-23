@@ -11,13 +11,16 @@ Files currently supported: `.png`, `.jpg` and `.mp4`.
 
 ```bash
 cp /path/to/*.png /path/to/*.jpg /path/to/*.mp4 files/   # copy files you want to view to the files/ directory
-python3 server.py   # asks you to set a password for this run
+python3 server.py   # set password and start server
 ```
 
-Each time the server starts, it asks you for a password (at least 8 characters). Only a salted PBKDF2 hash of it is kept in 
-memory, and nothing is written to disk. Then open https://<server-host>:8443/ and sign in.
+Each time the server starts, it asks you for a password with at least 8 characters. Only a salted PBKDF2 hash of it is kept in 
+memory, and nothing is written to disk. 
 
-Certificates: run ./make_certs.sh [public IP] and import ~/.local/share/fileviewer-ca/ca.pem once on each device (client browser). Both ports then work without warnings. Without this, the server creates a self-signed certificate on first run, and you have to accept the warning on both :8443 and :8444 ports.
+Open https://<server-host>:8443/ and sign in to see files.
+
+Certificates: run ./make_certs.sh [public IP] and import ~/.local/share/fileviewer-ca/ca.pem once on the server and client browser. Both ports then work without warnings. Without this, the server creates a self-signed certificate on first run, and you have to accept the warning on both :8443 and :8444 ports.
+
 
 ## Configuration
 
@@ -27,6 +30,7 @@ Certificates: run ./make_certs.sh [public IP] and import ~/.local/share/fileview
 | `FILEVIEWER_STREAM_PORT` | `8444` | Video stream port |
 | `FILEVIEWER_BIND` | `0.0.0.0` | Bind address |
 | `FILEVIEWER_MAX_SESSIONS` | `2` | How many browsers can be signed in at once |
+
 
 ## Security notes
 

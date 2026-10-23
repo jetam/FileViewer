@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""FileViewer: view PNG images (HTTPS) and stream MP4 videos (TLS TCP stream server).
-
-Usage:
-    python3 server.py    # prompts for this run's password, then runs the servers
-"""
+#FileViewer: view PNG images (HTTPS) and stream MP4 videos (TLS TCP stream server).
 
 import getpass
 import hashlib
@@ -378,8 +374,8 @@ class StreamHandler(socketserver.StreamRequestHandler):
     """Raw TCP handler that streams MP4 files in chunks.
 
     Browsers can only consume video over HTTP, so this speaks the minimal
-    subset of HTTP/1.1 that <video> needs: GET/HEAD and byte Range requests
-    (for seeking). The socket is TLS-wrapped so HTTPS pages may load it.
+    subset of HTTP/1.1 that <video> needs: GET/HEAD and byte Range requests.
+    The socket is TLS-wrapped so HTTPS pages may load it.
     """
 
     # timeout = TIMEOUT
